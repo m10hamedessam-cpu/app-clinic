@@ -1,0 +1,98 @@
+<div class="min-h-screen flex items-center justify-center bg-slate-200 p-6">
+  <div class="bg-white rounded-2xl shadow-xl overflow-hidden w-full max-w-5xl grid grid-cols-2">
+    <!-- LEFT SIDE -->
+    <div class="p-10">
+      <h2 class="text-2xl font-bold mb-2">Sign in</h2>
+      <p class="text-gray-500 mb-6">Enter your credentials to log in</p>
+
+      <!-- Roles -->
+      <div class="flex gap-3 mb-10">
+        <button class="btn bg-green-600 text-white rounded-full px-6">Admin</button>
+        <button class="btn bg-orange-500 text-white rounded-full px-6">Doctor</button>
+        <button class="btn bg-blue-600 text-white rounded-full px-6">Patient</button>
+      </div>
+
+      <!-- Username -->
+      <div class="mb-4">
+        <label class="text-sm text-gray-600">Username*</label>
+        <input
+          type="text"
+          class="input input-bordered w-full mt-1 focus:outline-blue-500"
+          placeholder="Enter username"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label class="text-sm text-gray-600">Password*</label>
+        <input type="password" class="input input-bordered w-full mt-1" placeholder="********" />
+      </div>
+
+      <!-- Options -->
+      <div class="flex justify-between items-center mb-6 text-sm">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="checkbox checkbox-sm" />
+          Remember me
+        </label>
+        <a href="#" class="text-purple-500">Forgot Password?</a>
+      </div>
+
+      <!-- Login Button -->
+      <button
+        (click)="onLogin()"
+        class="w-full py-3 rounded-lg text-white bg-linear-to-r from-gray-600 to-purple-500"
+      >
+        Login
+      </button>
+
+      <!-- Signup -->
+      <p class="text-center text-sm mt-4">
+        Don’t have an account?
+        <a class="text-purple-500 cursor-pointer">Sign up</a>
+      </p>
+
+      <!-- Social -->
+      <div class="flex justify-center gap-4 mt-4">
+        <li>
+          <a
+            href="http://facebook.com"
+            target="_blank"
+            class="block py-2 px-1 rounded md:p-0"
+            aria-current="page"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="http://twitter.com"
+            target="_blank"
+            class="block py-2 px-1 rounded md:p-0"
+            aria-current="page"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="http://google.com"
+            target="_blank"
+            class="block py-2 px-1 rounded md:p-0"
+            aria-current="page"
+          >
+            <i class="fab fa-google"></i>
+          </a>
+        </li>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="bg-[#f49e0b] flex items-center justify-center">
+      <img
+        src="/assets/images/premium_vector-1704282875661-552e096d7e36.avif"
+        class="w-full h-full object-cover"
+        alt="illustration"
+      />
+    </div>
+  </div>
+</div>
