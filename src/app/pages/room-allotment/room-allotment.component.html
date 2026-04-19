@@ -1,0 +1,163 @@
+<form [formGroup]="roomForm" (ngSubmit)="onSubmit()" class="p-6 bg-gray-100 min-h-screen">
+  <div class="bg-white rounded-xl shadow-sm p-6">
+    <!-- Title -->
+    <h2 class="text-lg font-semibold mb-6">New Room Allotment</h2>
+
+    <!-- ================= Patient Details ================= -->
+    <div class="flex items-center gap-2 mb-4 text-blue-600 font-medium">
+      <span>👤</span>
+      <span>Patient Details</span>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mb-6">
+      <!-- Patient Name -->
+      <div class="col-span-2">
+        <label class="label">patient Name</label>
+        <input
+          id="patient Name"
+          formControlName="patientName"
+          placeholder=""
+          required=" name"
+          class="input"
+        />
+      </div>
+
+      <!------------------------------------------------------->
+      <div>
+        <label class="label"> patient Id</label>
+        <input
+          id="patient Id"
+          formControlName="patientId"
+          placeholder=""
+          required=" ID"
+          class="input"
+        />
+      </div>
+
+      <!------------------------------------------------------->
+      <div>
+        <label class="label">Age</label>
+        <input id="Age" formControlName="age" placeholder="" required="age" class="input" />
+      </div>
+
+      <!--------------------------------------------------------->
+      <div>
+        <label class="label">Gender</label>
+        <select placeholder="" id="Gender" formControlName="gender" class="input">
+          <option>Male</option>
+          <option>Female</option>
+          <option>other</option>
+        </select>
+      </div>
+
+      <!-------------------------------------------------------->
+      <div>
+        <label class="label">Mobile</label>
+        <input
+          id="Mobile"
+          formControlName="mobile"
+          placeholder=""
+          required=" mobile"
+          class="input"
+        />
+      </div>
+
+      <!--------------------------------------------------------->
+      <div class="col-span-2">
+        <label class="label">Email</label>
+        <input id=" Email" formControlName="email" class="input" />
+      </div>
+
+      <!---------------------------------------------------------->
+      <div>
+        <label class="label">Emergency Contact</label>
+        <input id="Emergency Contact" formControlName="emergency" class="input" />
+      </div>
+    </div>
+
+    <!------------------------------------------------------------->
+    <div class="space-y-4 mb-6">
+      <div>
+        <label class="label">Medical History</label>
+        <textarea
+          id="Medical History"
+          formControlName="medicalHistory"
+          class="input h-24"
+        ></textarea>
+      </div>
+
+      <div>
+        <label class="label">Allergies</label>
+        <textarea id="Allergies" formControlName="allergies" class="input h-24"></textarea>
+      </div>
+    </div>
+
+    <!------------------------------------------------------------->
+    <div class="flex items-center gap-2 mb-4 text-blue-600 font-medium">
+      <span>🏢</span>
+      <span>Room Details</span>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div>
+        <label class="label">Room No</label>
+        <input id="Room No" formControlName="roomNo" class="input" />
+      </div>
+
+      <div>
+        <label class="label">Room Type</label>
+        <select id="Room Type" formControlName="roomType" class="input">
+          <option value="">Select</option>
+          <option>Single</option>
+          <option>Double</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label">Admission Date</label>
+        <input type="date" id="Admission Date" formControlName="admissionDate" class="input" />
+      </div>
+
+      <div>
+        <label class="label">Discharge Date</label>
+        <input type="date" id="Discharge Date" formControlName="dischargeDate" class="input" />
+      </div>
+
+      <div>
+        <label class="label">Doctor Assigned</label>
+        <input id="Doctor Assigned" formControlName="doctor" class="input" />
+      </div>
+
+      <div>
+        <label class="label">Status</label>
+        <select id="Status" formControlName="status" class="input">
+          <option>Admitted</option>
+          <option>Discharged</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label">Amount Charged</label>
+        <input id="Amount Charged" formControlName="amount" class="input" />
+      </div>
+
+      <div>
+        <label class="label">Notes</label>
+        <textarea id="Notes" formControlName="notes" class="input h-12"></textarea>
+      </div>
+    </div>
+
+    <!------------------------------------------------------------->
+    <div class="flex gap-3">
+      <button type="submit" class="bg-gray-300 text-gray-600 px-4 py-2 rounded-lg">Submit</button>
+
+      <button
+        type="button"
+        (click)="roomForm.reset()"
+        class="border px-4 py-2 rounded-lg text-blue-600"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+</form>

@@ -5,3 +5,25 @@
 @plugin "flowbite/plugin";
 
 @source "../node_modules/flowbite";
+
+
+.input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #374151;
+}

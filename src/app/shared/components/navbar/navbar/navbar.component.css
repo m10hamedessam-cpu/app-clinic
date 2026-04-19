@@ -1,0 +1,10 @@
+:host > div > div {
+  padding-left: 3.5rem;
+}
+
+:host > div > div > button:nth-of-type(2) {
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}

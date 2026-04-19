@@ -1,0 +1,92 @@
+<section>
+  <div class="min-h-screen flex items-center justify-center bg-slate-200 p-6">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden w-full max-w-5xl grid grid-cols-2">
+      <!-- LEFT SIDE -->
+      <div class="p-10">
+        <h2 class="text-2xl font-bold mb-2">Sign in</h2>
+        <p class="text-gray-500 mb-6">Enter your credentials to log in</p>
+
+        <!-- Roles -->
+        <div class="flex gap-3 mb-6">
+          <button class="bg-green-600 text-white px-6 py-2 rounded-full">Admin</button>
+          <button class="bg-orange-500 text-white px-6 py-2 rounded-full">Doctor</button>
+          <button class="bg-blue-600 text-white px-6 py-2 rounded-full">Patient</button>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <!-- Username -->
+          <div class="mb-4">
+            <label class="text-sm text-gray-500">Username*</label>
+            <input
+              type="text "
+              formControlName="identifier"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="Enter username"
+              autocomplete="email"
+            />
+          </div>
+          <!-- Password -->
+          <div class="mb-4">
+            <label class="text-sm text-gray-500">Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="••••••••"
+              autocomplete="current-password"
+            />
+          </div>
+
+          <!-- Options -->
+          <div class="flex justify-between items-center text-sm mb-6">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" />
+              Remember me
+            </label>
+
+            <a href="#" class="text-purple-500">Forgot Password?</a>
+          </div>
+
+          <!-- Login Button -->
+          <div class="form-actions">
+            <button
+              type="submit"
+              class=""
+              (click)="onLogin()"
+              class="w-full py-3 rounded-lg text-white bg-linear-to-r from-gray-600 to-purple-500"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+
+        <!-- Social -->
+        <div class="flex justify-center gap-4 mt-4">
+          <button
+            _ngcontent-ng-c3735768934=""
+            mat-icon-button=""
+            class="mdc-icon-button mat-mdc-icon-button mat-mdc-button-base social-btn google-btn mat-unthemed"
+            mat-ripple-loader-uninitialized=""
+            mat-ripple-loader-class-name="mat-mdc-button-ripple"
+            mat-ripple-loader-centered=""
+            fdprocessedid="y8jdlx"
+          >
+            <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span
+            ><img
+              _ngcontent-ng-c3735768934=""
+              src="assets/images/pages/google.svg"
+              alt="Google login"
+              width="24"
+              height="24"
+            /><span class="mat-focus-indicator"></span
+            ><span class="mat-mdc-button-touch-target"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="bg-orange-200 flex items-center justify-center">
+        <img src="/assets/images/premium_vector-1704282875661-552e096d7e36.avif" class="w-full" />
+      </div>
+    </div>
+  </div>
+</section>
